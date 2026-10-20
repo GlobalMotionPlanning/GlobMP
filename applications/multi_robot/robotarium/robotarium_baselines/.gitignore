@@ -1,0 +1,6 @@
+config/paths.env
+runs/
+**/data_trajectories/
+**/data_trained_models/
+**/results/
+**/__pycache__/

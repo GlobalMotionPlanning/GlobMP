@@ -1,0 +1,67 @@
+# XHand bimanual teleop (LeRobot v3), Latent Diffusion Policy stage. Cameras as real_lift (external + both
+# wrists): head_left_rgb + left_wrist + right_wrist. Note: the file named left_wrist shows the RIGHT hand.
+name: xhand_ldp
+
+image_shape: [3, 180, 320]
+dataset_path: ???
+episodes: ???
+# RDP predicts the TCP trajectory relative to the current pose and keeps the gripper width absolute; in joint
+# space: arm joints relative to the current state (action - state[t], obs state - state[t]), hand joints absolute.
+relative_action_dims: [0, 1, 2, 3, 4, 5, 6, 19, 20, 21, 22, 23, 24, 25]
+
+shape_meta: &shape_meta
+  obs:
+    head_left_rgb:
+      shape: ${task.image_shape}
+      type: rgb
+    left_wrist:
+      shape: ${task.image_shape}
+      type: rgb
+    right_wrist:
+      shape: ${task.image_shape}
+      type: rgb
+    state:
+      shape: [38]
+      type: low_dim
+    tactile:
+      shape: [30]
+      type: low_dim
+  extended_obs: # for the AT RNN decoder
+    tactile:
+      shape: [30]
+      type: low_dim
+  action:
+    shape: [38]
+
+dataset:
+  _target_: reactive_diffusion_policy.dataset.xhand_lerobot_dataset.XHandLeRobotLatentDataset
+  shape_meta: *shape_meta
+  dataset_path: ${task.dataset_path}
+  episodes: ${task.episodes}
+  horizon: ${horizon}
+  n_obs_steps: ${dataset_obs_steps}
+  obs_temporal_downsample_ratio: ${dataset_obs_temporal_downsample_ratio}
+  n_latency_steps: ${n_latency_steps}
+  relative_action_dims: ${task.relative_action_dims}
+  val_ratio: 0.0
+
+  # for calculating the normalizer parameters for the latent action
+  use_latent_action_before_vq: False
+  at:
+    _target_: reactive_diffusion_policy.model.vae.model.VAE
+    shape_meta: ${shape_meta}
+    horizon: ${at.policy.horizon}
+    n_latent_dims: ${at.policy.n_latent_dims}
+    mlp_layer_num: ${at.policy.mlp_layer_num}
+    use_conv_encoder: ${at.policy.use_conv_encoder}
+    conv_latent_dims: ${at.policy.conv_latent_dims}
+    conv_layer_num: ${at.policy.conv_layer_num}
+    use_rnn_decoder: ${at.policy.use_rnn_decoder}
+    rnn_latent_dims: ${at.policy.rnn_latent_dims}
+    rnn_layer_num: ${at.policy.rnn_layer_num}
+    use_vq: ${at.policy.use_vq}
+    n_embed: ${at.policy.n_embed}
+    vqvae_groups: ${at.policy.vqvae_groups}
+    eval: true
+    load_dir: ${at_load_dir}
+    act_scale: ${at.policy.act_scale}

@@ -1,0 +1,20 @@
+config/paths.env
+__pycache__/
+*.pyc
+*.log
+
+# T-Rex robot hardware code and robot meshes; not used for XHand training or evaluation
+# (eval/fk.py uses dataset_quickstart/src; the two Sharpa hand files it checks for are tracked explicitly)
+T-Rex/hardware_code/
+T-Rex/dataset_quickstart/third_party/
+
+# GR00T machine-local assets (created by GR00T/setup.sh and scripts/download_base.sh)
+GR00T/.venv
+GR00T/base_model
+GR00T/backbone
+GR00T/ffmpeg_libs
+
+# model weights downloaded by each folder's script (our tactile encoder in T-Rex/tactile_vqvae/checkpoints/ is tracked)
+pi05/base_model/
+T-Rex/checkpoints/
+RDP/extra_packages/

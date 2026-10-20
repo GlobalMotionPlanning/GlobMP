@@ -1,0 +1,248 @@
+{
+  "arena_m": {
+    "width": 3.2,
+    "height": 2.0,
+    "x_range": [
+      -1.6,
+      1.6
+    ],
+    "y_range": [
+      -1.0,
+      1.0
+    ],
+    "note": "env coordinates ARE metres in the arena frame, origin at arena centre"
+  },
+  "robot": {
+    "planning_radius_m": 0.13,
+    "physical_radius_m": 0.055
+  },
+  "obstacle_convention": "axis-aligned boxes; center=[x,y] centre in metres, size=[width,height] FULL extents in metres",
+  "maps": {
+    "empty": {
+      "env_class": "EnvEmptyNoWait2D",
+      "obs_scale": 1.0,
+      "wide_corridor": false,
+      "n_obstacles": 0,
+      "obstacles": []
+    },
+    "corridor": {
+      "env_class": "EnvConveyor2D",
+      "obs_scale": 1.1,
+      "wide_corridor": true,
+      "n_obstacles": 3,
+      "obstacles": [
+        {
+          "type": "box",
+          "center": [
+            0.0,
+            0.0
+          ],
+          "size": [
+            0.88,
+            0.11
+          ]
+        },
+        {
+          "type": "box",
+          "center": [
+            0.0,
+            0.4
+          ],
+          "size": [
+            1.1,
+            0.11
+          ]
+        },
+        {
+          "type": "box",
+          "center": [
+            0.0,
+            -0.4
+          ],
+          "size": [
+            1.1,
+            0.11
+          ]
+        }
+      ]
+    },
+    "crossroom": {
+      "env_class": "EnvCrossRoom2D",
+      "obs_scale": 0.85,
+      "wide_corridor": false,
+      "n_obstacles": 2,
+      "obstacles": [
+        {
+          "type": "box",
+          "center": [
+            0.0,
+            0.0
+          ],
+          "size": [
+            1.19,
+            0.153
+          ]
+        },
+        {
+          "type": "box",
+          "center": [
+            0.0,
+            0.0
+          ],
+          "size": [
+            0.153,
+            1.19
+          ]
+        }
+      ]
+    },
+    "shelf": {
+      "env_class": "EnvDropRegion2D",
+      "obs_scale": 0.4,
+      "wide_corridor": false,
+      "n_obstacles": 4,
+      "obstacles": [
+        {
+          "type": "box",
+          "center": [
+            0.4,
+            0.4
+          ],
+          "size": [
+            0.16,
+            0.16
+          ]
+        },
+        {
+          "type": "box",
+          "center": [
+            -0.4,
+            0.4
+          ],
+          "size": [
+            0.16,
+            0.16
+          ]
+        },
+        {
+          "type": "box",
+          "center": [
+            0.4,
+            -0.4
+          ],
+          "size": [
+            0.16,
+            0.16
+          ]
+        },
+        {
+          "type": "box",
+          "center": [
+            -0.4,
+            -0.4
+          ],
+          "size": [
+            0.16,
+            0.16
+          ]
+        }
+      ]
+    },
+    "corridorbay": {
+      "env_class": "EnvCorridorSMD2D",
+      "obs_scale": 0.2,
+      "wide_corridor": false,
+      "n_obstacles": 8,
+      "obstacles": [
+        {
+          "type": "box",
+          "center": [
+            -0.89,
+            0.31
+          ],
+          "size": [
+            0.044,
+            0.076
+          ]
+        },
+        {
+          "type": "box",
+          "center": [
+            -0.89,
+            -0.31
+          ],
+          "size": [
+            0.044,
+            0.076
+          ]
+        },
+        {
+          "type": "box",
+          "center": [
+            -0.3,
+            0.31
+          ],
+          "size": [
+            0.048,
+            0.076
+          ]
+        },
+        {
+          "type": "box",
+          "center": [
+            -0.3,
+            -0.31
+          ],
+          "size": [
+            0.048,
+            0.076
+          ]
+        },
+        {
+          "type": "box",
+          "center": [
+            0.3,
+            0.31
+          ],
+          "size": [
+            0.048,
+            0.076
+          ]
+        },
+        {
+          "type": "box",
+          "center": [
+            0.3,
+            -0.31
+          ],
+          "size": [
+            0.048,
+            0.076
+          ]
+        },
+        {
+          "type": "box",
+          "center": [
+            0.89,
+            0.31
+          ],
+          "size": [
+            0.044,
+            0.076
+          ]
+        },
+        {
+          "type": "box",
+          "center": [
+            0.89,
+            -0.31
+          ],
+          "size": [
+            0.044,
+            0.076
+          ]
+        }
+      ]
+    }
+  }
+}

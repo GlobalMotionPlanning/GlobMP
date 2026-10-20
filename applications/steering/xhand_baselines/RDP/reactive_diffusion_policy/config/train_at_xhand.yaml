@@ -1,0 +1,103 @@
+# Stage 1 (Asymmetric Tokenizer) on XHand teleop: train_at_workspace with
+#   task=xhand_at, at=at_xhand, seed 1000, a step budget (training.max_steps) instead of 601 epochs,
+#   wandb disabled, no extra top-k checkpoint copy. Everything else as the original.
+# Temporal settings are kept in STEPS (horizon 32, obs t-2,t), so at 30 fps the AT decoder runs at the
+# data rate, 30 Hz, like RDP's AT at its 24 Hz data rate (chunk 1.07 s instead of 1.33 s).
+defaults:
+  - task: xhand_at
+  - at: at_xhand
+  - _self_
+
+name: train_vae
+_target_: reactive_diffusion_policy.workspace.train_at_workspace.TrainATWorkspace
+
+task_name: ${task.name}
+shape_meta: ${task.shape_meta}
+exp_name: "default"
+
+horizon: ${at.horizon}
+n_obs_steps: ${at.n_obs_steps}
+n_latency_steps: 0
+dataset_obs_steps: ${eval:'${n_obs_steps}*${at.dataset_obs_temporal_downsample_ratio}'}
+dataset_obs_temporal_downsample_ratio: ${at.dataset_obs_temporal_downsample_ratio}
+n_action_steps: ${eval:'${horizon}-${dataset_obs_steps}+1'}
+
+policy:
+  _target_: reactive_diffusion_policy.model.vae.model.VAE
+  shape_meta: ${task.shape_meta}
+  horizon: ${horizon}
+  n_latent_dims: ${at.policy.n_latent_dims}
+  mlp_layer_num: ${at.policy.mlp_layer_num}
+  use_conv_encoder: ${at.policy.use_conv_encoder}
+  conv_latent_dims: ${at.policy.conv_latent_dims}
+  conv_layer_num: ${at.policy.conv_layer_num}
+  use_rnn_decoder: ${at.policy.use_rnn_decoder}
+  rnn_latent_dims: ${at.policy.rnn_latent_dims}
+  rnn_layer_num: ${at.policy.rnn_layer_num}
+  kl_multiplier: ${at.policy.kl_multiplier}
+  n_embed: ${at.policy.n_embed}
+  use_vq: ${at.policy.use_vq}
+  vqvae_groups: ${at.policy.vqvae_groups}
+  eval: ${at.policy.eval}
+  act_scale: ${at.policy.act_scale}
+
+dataloader:
+  batch_size: 64
+  num_workers: 4
+  shuffle: True
+  pin_memory: True
+  persistent_workers: True
+
+val_dataloader:   # no validation split (val_ratio 0, as the original); held-out episodes are only for eval
+  batch_size: 64
+  num_workers: 0
+  shuffle: False
+
+optimizer:
+  _target_: torch.optim.AdamW
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+
+training:
+  device: "cuda:0"
+  seed: 1000
+  debug: False
+  resume: True
+  lr_scheduler: cosine
+  lr_warmup_steps: 100
+  num_epochs: 601          # ignored when max_steps is set
+  max_steps: 40000
+  gradient_accumulate_every: 1
+  use_ema: False
+  freeze_encoder: False
+  rollout_every: -1
+  checkpoint_every: 10
+  val_every: 1
+  sample_every: -1
+  max_train_steps: null
+  max_val_steps: null
+  tqdm_interval_sec: 10.0
+
+logging:
+  project: at
+  resume: True
+  mode: disabled
+  name: ${name}_${task_name}
+  tags: ["${name}", "${task_name}", "${exp_name}"]
+  id: null
+  group: null
+
+checkpoint:
+  topk:
+    monitor_key: train_loss
+    mode: min
+    k: 0
+    format_str: 'epoch={epoch:04d}-train_loss={train_loss:.6f}.ckpt'
+  save_last_ckpt: True
+  save_last_snapshot: False
+
+hydra:
+  job:
+    override_dirname: ${name}
+  run:
+    dir: data/outputs/${now:%Y.%m.%d}/${now:%H.%M.%S}_${name}_${task_name}

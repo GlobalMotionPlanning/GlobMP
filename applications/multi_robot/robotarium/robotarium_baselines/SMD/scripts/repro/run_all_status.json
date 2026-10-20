@@ -1,0 +1,66 @@
+{
+  "empty-3": {
+    "done": true,
+    "elapsed": 63.13148379325867
+  },
+  "empty-6": {
+    "done": true,
+    "elapsed": 1264.7655339241028
+  },
+  "empty-9": {
+    "done": true,
+    "elapsed": 3276.8867933750153
+  },
+  "basic-3": {
+    "done": true,
+    "elapsed": 4795.977411985397
+  },
+  "basic-6": {
+    "done": true,
+    "elapsed": 13408.675094127655
+  },
+  "basic-9": {
+    "done": true,
+    "elapsed": 26241.75526714325
+  },
+  "dense-3": {
+    "done": true,
+    "elapsed": 10631.627315759659
+  },
+  "dense-6": {
+    "done": true,
+    "elapsed": 30197.683992147446
+  },
+  "dense-9": {
+    "done": true,
+    "note": "Intentionally excluded: only 2 demonstrations possible in a 20-min budget (112704 candidate configs tried), genuinely near-infeasible with the fast synthetic generation method. Documented limitation, not retried."
+  },
+  "corridor-2": {
+    "done": true,
+    "elapsed": 30.96598529815674
+  },
+  "room-3": {
+    "done": true,
+    "elapsed": 57.65876865386963
+  },
+  "room-6": {
+    "done": true,
+    "elapsed": 1960.9480805397034
+  },
+  "room-9": {
+    "done": true,
+    "elapsed": 3714.583260536194
+  },
+  "shelf-3": {
+    "done": true,
+    "elapsed": 201.7592043876648
+  },
+  "shelf-6": {
+    "done": true,
+    "elapsed": 1571.4311594963074
+  },
+  "shelf-9": {
+    "done": true,
+    "elapsed": 3524.5988461971283
+  }
+}

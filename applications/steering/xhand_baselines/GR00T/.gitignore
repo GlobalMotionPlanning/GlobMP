@@ -1,0 +1,27 @@
+# --- weights / data / env: NEVER commit (code-only bundle) ---
+# NOTE: dir patterns are ROOT-ANCHORED (leading /) so they don't match code dirs
+# like gr00t/data/ or gr00t/configs/data/.
+.venv/
+.venv-genesis/
+**/__pycache__/
+*.pyc
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.zarr/
+*.mp4
+*.gif
+*.npz
+*.log
+/checkpoints/
+/outputs/
+/runs/
+/wandb/
+/data/
+/datasets/
+/base_model/
+/backbone/
+/ffmpeg_libs/
+/assets/

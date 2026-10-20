@@ -1,0 +1,18 @@
+# id	raw session (under XB_RAW)	split	instruction (exact text used in training)	former id
+toy_shelf_0917	pick_place_toy_on_shelf_20260917	every10	Pick up the toy and place it on the shelf.	xhand
+tissue_pick_0918	tissue_pick_20260918	every10	Hold the tissue box steady with the left hand and pull a tissue out of it with the right hand.	tissue_pick
+handover_shelf_0918	handover_tissue_box_shelf_to_shelf_20260918	every10	Pick up the tissue box from the shelf, hand it to the other hand, and place it on the other shelf.	handover
+mug_backpack_0918	put_mug_in_backpack_20260918	every10	Hold the backpack open with the left hand and put the mug inside it with the right hand.	mug18
+marker_pick_0921	marker_pick_20260921	every10	Pull the marker out of the pen holder with the left hand and lay it on the table.	marker21
+handover_shelf_0921	handover_tissue_box_shelf_to_shelf_20260921	every10	Pick the tissue box from the shelf, hand it to the other hand, and place it on the other shelf level.	handover21
+mug_backpack_0922	put_mug_in_backpack_20260922	every10	Hold the backpack open with the left hand and put the mug inside it with the right hand.	mug22
+paper_cups_0922	paper_cups_20260922	every10	Pick up one paper cup in each hand and place the right cup into the left cup.	cups22
+unstack_cup_0923	back_stack_cup_20260923	every10	Lift the top paper cup off the stack with the right hand and set it down on the table.	unstack23
+sprayer_0923	sprayer_20260923	every10	Grasp the spray bottle with the right hand, lift it, and set it back down.	sprayer23
+# toy_shelf_random_0928 not part of the benchmark (runs cancelled); uncomment and run data_prep/prepare_task.sh to use it
+# toy_shelf_random_0928	toy_shelf_random_20260928	train100	Pick up the toy and place it on the shelf.	toyrnd28
+# tissue_random_0930 retired 2026-10-11: session not recorded correctly (raw moved to teleop/_quarantine_bad); use tissue_random_1009
+# tissue_random_0930	tissue_random_20260930	train100	Hold the tissue box steady with the left hand and pull a tissue out of it with the right hand.	tissuernd30
+backpack_random_1006	put_mug_in_backpack_random_20261006	every10	Hold the backpack open with the left hand and put the bottle inside it with the right hand.	-
+handover_random_1007	handover_tissue_box_shelf_to_shelf_random_20261007	train100	Pick up the tissue box from the shelf, hand it to the other hand, and place it on the other shelf.	-
+tissue_random_1009	extract_tissue_random_20261009	every10	Hold the tissue box steady with the left hand and pull a tissue out of it with the right hand.	-

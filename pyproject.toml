@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "globmp"
+version = "0.1.0"
+description = "GlobMP: continuous-time constrained motion planning with global convergence guarantees"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy", "torch", "cvxpy", "clarabel"]
+
+[project.optional-dependencies]
+baselines = ["ompl", "drake", "matplotlib"]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["globmp*"]

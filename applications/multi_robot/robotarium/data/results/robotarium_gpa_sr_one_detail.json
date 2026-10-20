@@ -1,0 +1,165 @@
+[
+ {
+  "map": "empty",
+  "N": 3,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "empty",
+  "N": 6,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "empty",
+  "N": 9,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "empty",
+  "N": 12,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "corridor",
+  "N": 3,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "corridor",
+  "N": 6,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "corridor",
+  "N": 9,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "corridor",
+  "N": 12,
+  "SR_one": 0.8,
+  "SR_one_whole_trajectory": 0.8,
+  "gpa_certified": 8,
+  "failed_instances": [
+   3,
+   4
+  ]
+ },
+ {
+  "map": "crossroom",
+  "N": 3,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "crossroom",
+  "N": 6,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "crossroom",
+  "N": 9,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "crossroom",
+  "N": 12,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "shelf",
+  "N": 3,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "shelf",
+  "N": 6,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "shelf",
+  "N": 9,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "shelf",
+  "N": 12,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "corridorbay",
+  "N": 3,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "corridorbay",
+  "N": 6,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "corridorbay",
+  "N": 9,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ },
+ {
+  "map": "corridorbay",
+  "N": 12,
+  "SR_one": 1.0,
+  "SR_one_whole_trajectory": 1.0,
+  "gpa_certified": 10,
+  "failed_instances": []
+ }
+]

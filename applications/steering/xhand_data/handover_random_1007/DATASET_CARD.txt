@@ -1,0 +1,10 @@
+a. Task ID: Teleop-Glove 10-07-2026-1
+Task name: Hand over a tissue box between shelves (randomized positions) using RobotEra XHand1 on DexMate Vega, teleoperated with a Meta glove
+c. Number of subtasks: 1
+d. Description of the subtask: The operator picks a tissue box from one level of the shelf with one hand, passes it to the other hand, and places it on a different level. Object placement is randomized across episodes. Teleoperation is glove-based: the operator wears a Meta glove for finger retargeting onto the XHand1, with no exoskeleton. Wrist and arm pose is tracked via Vive.
+e. Number of episodes collected: 104
+f. Any extra comments: XHand1 12-DOF per hand + fingertip tactile; Meta-glove teleop, no exoskeleton. 4 RGB cameras (head_left, head_right, left_wrist, right_wrist), 640×360 @ 30 fps, H.264. Command rate 30 Hz. Arms 7 DOF each with joint positions, target DOFs, and 4×4 current/target poses. Episode durations: mean 19 s, median 19 s, range 16–25 s, 33 min total. 10.6 GB. Known issues: right-hand tactile pressure maps are weak (under-scaled) in this session, right-hand fingertip force is fine; the left ring fingertip sensor responds only to firm contact.
+
+Collected Data History
+
+2026-10-07: Hand over a tissue box shelf to shelf (randomized positions), XHand1 hands with tactile, Meta-glove teleop (no exoskeleton), 4-camera — 104 episodes — avg ~19 s/episode — /data1/dexmate/teleop/handover_tissue_box_shelf_to_shelf_random_20261007

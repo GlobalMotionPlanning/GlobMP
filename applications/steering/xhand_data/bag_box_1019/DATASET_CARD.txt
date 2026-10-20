@@ -1,0 +1,5 @@
+Task name: Pick up a handbag with both hands and place it in a cardboard box (bag and box poses randomized), XHand1 hands with tactile
+Number of episodes: 128 (100 train, 28 held out), recorded 2026-10-18 and 2026-10-19
+Classes: light 57, heavy 71. Labelled by grip force (less force = light); splits.json has the class of every episode.
+Notes: most episodes are robot replays of one earlier recording (scripted hand commands, randomized bag and box poses); only clean episodes are included.
+4 RGB cameras 640x360 @ 30 fps, command rate 30 Hz, arms 7 DOF each.

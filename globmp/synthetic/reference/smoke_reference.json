@@ -1,0 +1,392 @@
+{
+ "_about": "Values from the runs behind the paper figures (sphere-only family), for globmp.synthetic.smoke.",
+ "N2_i0_ours_routes": {
+  "mmm": {
+   "cost": 50.02989824861288,
+   "feasible": true,
+   "min_clearance": 0.005000008096345487,
+   "route": [
+    -1,
+    -1,
+    -1
+   ]
+  },
+  "mmp": {
+   "cost": 77.68445438891649,
+   "feasible": true,
+   "min_clearance": 0.005000000001252669,
+   "route": [
+    -1,
+    -1,
+    1
+   ]
+  },
+  "mpm": {
+   "cost": 73.7944380491972,
+   "feasible": true,
+   "min_clearance": 0.005000007473071388,
+   "route": [
+    -1,
+    1,
+    -1
+   ]
+  },
+  "mpp": {
+   "cost": 22.832701802253723,
+   "feasible": true,
+   "min_clearance": 0.005000009563782548,
+   "route": [
+    -1,
+    1,
+    1
+   ]
+  },
+  "pmm": {
+   "cost": 14.182331442832947,
+   "feasible": true,
+   "min_clearance": 0.005000002519990665,
+   "route": [
+    1,
+    -1,
+    -1
+   ]
+  },
+  "pmp": {
+   "cost": 59.51100381463766,
+   "feasible": true,
+   "min_clearance": 0.005000000017962858,
+   "route": [
+    1,
+    -1,
+    1
+   ]
+  },
+  "ppm": {
+   "cost": 53.71022653579712,
+   "feasible": true,
+   "min_clearance": 0.005000000015716877,
+   "route": [
+    1,
+    1,
+    -1
+   ]
+  },
+  "ppp": {
+   "cost": 17.27067754417658,
+   "feasible": true,
+   "min_clearance": 0.0050000008192792045,
+   "route": [
+    1,
+    1,
+    1
+   ]
+  }
+ },
+ "N4_i12_ours_routes": {
+  "mmmm": {
+   "cost": 83.68552868068218,
+   "feasible": true,
+   "min_clearance": 0.00500000000000278,
+   "route": [
+    -1,
+    -1,
+    -1,
+    -1
+   ]
+  },
+  "mmmp": {
+   "cost": 115.4862171113491,
+   "feasible": true,
+   "min_clearance": 0.004999999999998339,
+   "route": [
+    -1,
+    -1,
+    -1,
+    1
+   ]
+  },
+  "mmpm": {
+   "cost": 91.25165730714798,
+   "feasible": true,
+   "min_clearance": 0.005000000000001004,
+   "route": [
+    -1,
+    -1,
+    1,
+    -1
+   ]
+  },
+  "mmpp": {
+   "cost": 47.90186996757984,
+   "feasible": true,
+   "min_clearance": 0.004999999999998339,
+   "route": [
+    -1,
+    -1,
+    1,
+    1
+   ]
+  },
+  "mpmm": {
+   "cost": 77.90842536091805,
+   "feasible": true,
+   "min_clearance": 0.004999999999994786,
+   "route": [
+    -1,
+    1,
+    -1,
+    -1
+   ]
+  },
+  "mpmp": {
+   "cost": 109.70911340415478,
+   "feasible": true,
+   "min_clearance": 0.005000000000001004,
+   "route": [
+    -1,
+    1,
+    -1,
+    1
+   ]
+  },
+  "mppm": {
+   "cost": 85.4745532721281,
+   "feasible": true,
+   "min_clearance": 0.004999999999998339,
+   "route": [
+    -1,
+    1,
+    1,
+    -1
+   ]
+  },
+  "mppp": {
+   "cost": 42.12476570904255,
+   "feasible": true,
+   "min_clearance": 0.005000000000001004,
+   "route": [
+    -1,
+    1,
+    1,
+    1
+   ]
+  },
+  "pmmm": {
+   "cost": 43.29233346879482,
+   "feasible": true,
+   "min_clearance": 0.0050000000000001155,
+   "route": [
+    1,
+    -1,
+    -1,
+    -1
+   ]
+  },
+  "pmmp": {
+   "cost": 91.42189228534698,
+   "feasible": true,
+   "min_clearance": 0.005000000000001004,
+   "route": [
+    1,
+    -1,
+    -1,
+    1
+   ]
+  },
+  "pmpm": {
+   "cost": 66.59872803092003,
+   "feasible": true,
+   "min_clearance": 0.0050000000000001155,
+   "route": [
+    1,
+    -1,
+    1,
+    -1
+   ]
+  },
+  "pmpp": {
+   "cost": 42.35029838979244,
+   "feasible": true,
+   "min_clearance": 0.005000000000001004,
+   "route": [
+    1,
+    -1,
+    1,
+    1
+   ]
+  },
+  "ppmm": {
+   "cost": 37.5152293741703,
+   "feasible": true,
+   "min_clearance": 0.004999999999995675,
+   "route": [
+    1,
+    1,
+    -1,
+    -1
+   ]
+  },
+  "ppmp": {
+   "cost": 85.64478760957718,
+   "feasible": true,
+   "min_clearance": 0.004999999999999227,
+   "route": [
+    1,
+    1,
+    -1,
+    1
+   ]
+  },
+  "pppm": {
+   "cost": 60.821624368429184,
+   "feasible": true,
+   "min_clearance": 0.004999999999999227,
+   "route": [
+    1,
+    1,
+    1,
+    -1
+   ]
+  },
+  "pppp": {
+   "cost": 36.57319454848766,
+   "feasible": true,
+   "min_clearance": 0.004999999999995675,
+   "route": [
+    1,
+    1,
+    1,
+    1
+   ]
+  }
+ },
+ "N2_i0_rrt": {
+  "ok": true,
+  "n_states": 7,
+  "length": 17.526316578708272,
+  "cost": 7216.023570291698,
+  "feasible": true,
+  "min_clearance": 0.060261693299661356,
+  "route": [
+   1,
+   1,
+   1
+  ]
+ },
+ "N2_i0_rrt_post": {
+  "best": "track_sc0.5_l10000",
+  "cost": 622.5610577315092,
+  "feasible": true,
+  "min_clearance": 0.035208308252053566,
+  "route": [
+   1,
+   1,
+   1
+  ]
+ },
+ "N2_i0_gcs2": {
+  "best": "track_scNone_l10000",
+  "n_regions": 7,
+  "cost": 45.34042679518461,
+  "feasible": true,
+  "min_clearance": 0.019471746741334228,
+  "route": [
+   1,
+   1,
+   1
+  ]
+ },
+ "N2_i0_sdp": {
+  "lower_bound": 12.656474502323189,
+  "cost": 10.137036256492138,
+  "feasible": false,
+  "min_clearance": -0.4979793718565525,
+  "route": [
+   1,
+   1,
+   1
+  ]
+ },
+ "scale_N2_s0_ourscpu": {
+  "blocks": 28,
+  "alg1_n_it": 28,
+  "alg1": {
+   "cost": 3156231.258161947,
+   "feasible": true,
+   "min_clearance": 0.0020068558072402487,
+   "route": [
+    1,
+    1,
+    -1,
+    1
+   ]
+  },
+  "alg12": {
+   "cost": 28994.36879827082,
+   "feasible": true,
+   "min_clearance": 0.0033188054510429055,
+   "route": [
+    1,
+    1,
+    -1,
+    1
+   ]
+  }
+ },
+ "scale_N32_s0_ourscpu": {
+  "blocks": 2368,
+  "alg1_n_it": 28,
+  "alg1": {
+   "cost": 12637694.57740593,
+   "feasible": true,
+   "min_clearance": 0.0034001268990195843,
+   "route": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    -1,
+    1
+   ]
+  },
+  "alg12": {
+   "cost": 33777.264141082764,
+   "feasible": true,
+   "min_clearance": 0.004233777902096336,
+   "route": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    -1,
+    1
+   ]
+  }
+ }
+}

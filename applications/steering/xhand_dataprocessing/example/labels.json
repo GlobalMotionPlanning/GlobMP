@@ -1,0 +1,5 @@
+{
+  "episode":   {"label": "toy on shelf", "task": "pick and place"},
+  "bag_light": {"label": "bag, light", "class": "light", "split": "train"},
+  "bag_heavy": {"label": "bag, heavy", "class": "heavy", "split": "train"}
+}

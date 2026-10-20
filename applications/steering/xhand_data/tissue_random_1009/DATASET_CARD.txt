@@ -1,0 +1,10 @@
+a. Task ID: Teleop-Glove 10-09-2026-1
+Task name: Extract a tissue from a tissue box (randomized positions) using RobotEra XHand1 on DexMate Vega, teleoperated with a Meta glove
+c. Number of subtasks: 1
+d. Description of the subtask: The operator holds the tissue box steady with the left hand and pulls a single tissue out of it with the right hand. Object placement is randomized across episodes. Teleoperation is glove-based: the operator wears a Meta glove for finger retargeting onto the XHand1, with no exoskeleton. Wrist and arm pose is tracked via Vive.
+e. Number of episodes collected: 102
+f. Any extra comments: XHand1 12-DOF per hand + fingertip tactile; Meta-glove teleop, no exoskeleton. 4 RGB cameras (head_left, head_right, left_wrist, right_wrist), 640×360 @ 30 fps, H.264. Command rate 30 Hz. Arms 7 DOF each with joint positions, target DOFs, and 4×4 current/target poses. Episode durations: mean 11 s, median 11 s, range 7–17 s, 18 min total. 3.6 GB. Replaces tissue_random_20260930, which was not recorded correctly. Known issues: right-hand tactile pressure maps are weak (under-scaled) in this session, right-hand fingertip force is fine.
+
+Collected Data History
+
+2026-10-09: Extract a tissue from a tissue box (randomized positions), XHand1 hands with tactile, Meta-glove teleop (no exoskeleton), 4-camera — 102 episodes — avg ~11 s/episode — /data1/dexmate/teleop/extract_tissue_random_20261009

@@ -1,0 +1,11 @@
+dataset_subdir: singleagent_corridorwiderbt_EnvConveyor2D-RobotPlanarDisk
+diffusion_model_class: GaussianDiffusionModel
+include_velocity: true
+instance_idx: 0
+map_name: corridor_map
+n_diffusion_steps: 25
+predict_epsilon: true
+unet_dim_mults_option: 1
+unet_input_dim: 32
+use_ema: true
+variance_schedule: exponential

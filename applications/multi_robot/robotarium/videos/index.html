@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Robotarium Method Grid</title>
+<style>
+:root{--bg:#fff;--fg:#1a1a1a;--mut:#666;--line:#ddd;--ours:#c0392b;--btn:#f2f2f2}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15161a;--fg:#eee;--mut:#9a9a9a;--line:#333;--ours:#ff6b5b;--btn:#24262c}}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.4 system-ui,sans-serif}
+header{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+button{background:var(--btn);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:6px 14px;font-weight:600;cursor:pointer}
+input[type=range]{flex:1;min-width:160px}
+#t{font-variant-numeric:tabular-nums;min-width:90px;color:var(--mut)}
+.grid{display:grid;grid-template-columns:110px repeat(var(--nc),minmax(0,1fr));gap:4px;padding:8px 16px 24px}
+.hd{text-align:center;font-weight:700;padding:4px 0}.hd.ours{color:var(--ours)}
+.rl{display:flex;align-items:center;font-weight:700}
+.cell{position:relative}
+video{width:100%;display:block;border-radius:3px;cursor:zoom-in;background:#000}
+.tag{position:absolute;right:4px;bottom:4px;background:#000a;color:#fff;font-size:11px;padding:1px 5px;border-radius:3px}
+#zoom{position:fixed;inset:0;background:#000d;display:none;align-items:center;justify-content:center;z-index:5}
+#zoom video{max-width:94vw;max-height:88vh;width:auto;cursor:zoom-out}
+#zoom .cap{position:absolute;top:12px;color:#fff;font-weight:700}
+@media (max-width:700px){.grid{grid-template-columns:70px repeat(var(--nc),minmax(0,1fr));padding:8px}.hd{font-size:11px}.rl{font-size:11px}}
+</style></head><body>
+<header><button id="pp">▶ Play all</button><button id="rs">⟲ Restart</button>
+<input id="sk" type="range" min="0" step="0.04" value="0"><span id="t">0.0 s</span>
+<button id="vw">View: rectified</button><label><select id="rate"><option>0.5</option><option selected>1</option><option>2</option><option>4</option></select>×</label></header>
+<div class="grid" id="g"></div>
+<div id="zoom"><div class="cap" id="zc"></div><video id="zv" muted playsinline></video></div>
+<script>
+const M={"duration": 121.32, "maps": ["Empty", "Drop-Region", "Conveyor", "Corridor-Bay", "Cross-Room"], "methods": ["CD", "MMD-CBS", "PCD-SHD", "Final Proj.", "DiRecT", "GlobMP (ours)"], "clips": ["empty_CD.mp4", "empty_MMD-CBS.mp4", "empty_PCD-SHD.mp4", "empty_Final.mp4", "empty_DiRecT.mp4", "empty_GlobMP.mp4", "shelf_CD.mp4", "shelf_MMD-CBS.mp4", "shelf_PCD-SHD.mp4", "shelf_Final.mp4", "shelf_DiRecT.mp4", "shelf_GlobMP.mp4", "corridor_CD.mp4", "corridor_MMD-CBS.mp4", "corridor_PCD-SHD.mp4", "corridor_Final.mp4", "corridor_DiRecT.mp4", "corridor_GlobMP.mp4", "corridorbay_CD.mp4", "corridorbay_MMD-CBS.mp4", "corridorbay_PCD-SHD.mp4", "corridorbay_Final.mp4", "corridorbay_DiRecT.mp4", "corridorbay_GlobMP.mp4", "crossroom_CD.mp4", "crossroom_MMD-CBS.mp4", "crossroom_PCD-SHD.mp4", "crossroom_Final.mp4", "crossroom_DiRecT.mp4", "crossroom_GlobMP.mp4"], "dirs": {"rect": "clips", "fish": "clips_fisheye"}, "run_s": [68.4, 115.0, 53.8, 56.8, 57.4, 50.3, 75.8, 121.4, 89.8, 80.2, 61.9, 61.6, 85.1, 0, 88.9, 88.8, 79.7, 73.6, 89.8, 121.2, 89.8, 87.8, 64.5, 52.9, 77.7, 0, 89.8, 78.6, 71.0, 51.6]};
+let VIEW="rect";const src=k=>M.dirs[VIEW]+"/"+M.clips[k];
+const g=document.getElementById('g'),vids=[];g.style.setProperty('--nc',M.methods.length);
+g.append(Object.assign(document.createElement('div')));
+M.methods.forEach(m=>{const d=document.createElement('div');d.className='hd'+(m.includes('ours')?' ours':'');d.textContent=m;g.append(d)});
+M.maps.forEach((mp,i)=>{const r=document.createElement('div');r.className='rl';r.textContent=mp;g.append(r);
+ M.methods.forEach((me,j)=>{const k=i*M.methods.length+j,c=document.createElement('div');c.className='cell';
+  const v=document.createElement('video');v.src=src(k);v.muted=true;v.playsInline=true;v.preload='auto';
+  v.onclick=()=>openZoom(k);vids.push(v);
+  const t=document.createElement('span');t.className='tag';t.textContent=M.run_s[k]+' s';c.append(v,t);g.append(c)})});
+const master=vids[vids.length-1],pp=document.getElementById('pp'),sk=document.getElementById('sk'),tt=document.getElementById('t');
+sk.max=M.duration;let playing=false;
+function setAll(t){vids.forEach(v=>{v.currentTime=Math.min(t,v.duration||t)});if(zv.src)zv.currentTime=t}
+async function play(){await Promise.all(vids.map(v=>new Promise(r=>v.readyState>=3?r():v.addEventListener('canplay',r,{once:true}))));
+ setAll(master.currentTime);vids.forEach(v=>v.play());playing=true;pp.textContent='❚❚ Pause'}
+function pause(){vids.forEach(v=>v.pause());playing=false;pp.textContent='▶ Play all';setAll(master.currentTime)}
+pp.onclick=()=>playing?pause():play();
+document.getElementById('rs').onclick=()=>{pause();setAll(0)};
+sk.oninput=()=>{const was=playing;if(was)pause();setAll(+sk.value);if(was)play()};
+document.getElementById('rate').onchange=e=>vids.forEach(v=>v.playbackRate=+e.target.value);
+setInterval(()=>{const t=master.currentTime;sk.value=t;tt.textContent=t.toFixed(1)+' s';
+ if(playing){vids.forEach(v=>{if(Math.abs(v.currentTime-t)>0.12)v.currentTime=t})}
+ if(master.ended){playing=false;pp.textContent='▶ Play all'}},200);
+document.getElementById('vw').onclick=async e=>{const t=master.currentTime,was=playing;if(was)pause();
+ VIEW=VIEW==='rect'?'fish':'rect';e.target.textContent='View: '+(VIEW==='rect'?'rectified':'fisheye');
+ const gv=vids.filter(v=>v!==zv);gv.forEach((v,k)=>{v.src=src(k)});
+ await Promise.all(gv.map(v=>new Promise(r=>v.readyState>=1?r():v.addEventListener('loadedmetadata',r,{once:true}))));
+ setAll(t);if(was)play()};
+const z=document.getElementById('zoom'),zv=document.getElementById('zv');
+function openZoom(k){zv.src=src(k);document.getElementById('zc').textContent=M.maps[Math.floor(k/M.methods.length)]+' — '+M.methods[k%M.methods.length];
+ zv.currentTime=master.currentTime;if(playing)zv.play();z.style.display='flex';vids.push(zv)}
+z.onclick=()=>{z.style.display='none';zv.pause();vids.splice(vids.indexOf(zv),1);zv.removeAttribute('src')};
+</script></body></html>

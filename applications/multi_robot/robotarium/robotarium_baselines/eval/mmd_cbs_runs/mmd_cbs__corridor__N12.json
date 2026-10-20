@@ -1,0 +1,327 @@
+{
+  "map": "corridor",
+  "env": "EnvConveyor2D",
+  "obs_scale": 1.1,
+  "robot_r": 0.13,
+  "occupied_fraction": 0.0831415057182312,
+  "free_for_disk": 0.6609984636306763,
+  "agent_list": [
+    12
+  ],
+  "n_instances": 10,
+  "n_samples": 768,
+  "runtime_limit": 60.0,
+  "models_root": "$RB_ROOT/runs/models_flat",
+  "obstacle_margin": 0.12,
+  "inter_agent_margin": 0.16,
+  "per_n": {
+    "12": {
+      "n_trials": 10,
+      "SR": 0.0,
+      "SOLVED_005": 0.0,
+      "SOLVED_010": 0.0,
+      "CS_low": [
+        0.0,
+        0.0
+      ],
+      "CS_medium": [
+        0.0,
+        0.0
+      ],
+      "CS_high": [
+        0.0,
+        0.0
+      ],
+      "CS_vel_low": [
+        0.0,
+        0.0
+      ],
+      "CS_vel_medium": [
+        0.6667,
+        0.4714
+      ],
+      "CS_vel_high": [
+        0.6667,
+        0.4714
+      ],
+      "vmax_observed": [
+        1.5036,
+        0.1943
+      ],
+      "low_level_free_frac": [
+        0.5851,
+        0.1071
+      ],
+      "Coll_env": [
+        -0.7,
+        0.4583
+      ],
+      "Coll_agents": [
+        18.8,
+        30.4952
+      ],
+      "DA": [
+        0.0,
+        0.0
+      ],
+      "Time_plan_s": [
+        19.8772,
+        28.2889
+      ],
+      "Time_build_s": [
+        2.1235,
+        3.5584
+      ],
+      "Time_wall_s": [
+        22.0077,
+        30.2143
+      ],
+      "CT_expansions": [
+        1.5,
+        2.4187
+      ],
+      "low_level_calls": [
+        9.9,
+        8.1173
+      ],
+      "statuses": {
+        "TrialSuccessStatus.FAIL_NO_SOLUTION": 7,
+        "TrialSuccessStatus.FAIL_RUNTIME_LIMIT": 3
+      }
+    }
+  },
+  "total_wall_s": 226.18991470336914,
+  "rows": [
+    {
+      "trial": 0,
+      "map": "corridor",
+      "env": "EnvConveyor2D",
+      "n_agents": 12,
+      "n_samples": 768,
+      "status": "TrialSuccessStatus.FAIL_RUNTIME_LIMIT",
+      "num_ct_expansions": 4,
+      "t_plan_s": 61.97103571891785,
+      "t_build_s": 12.794594764709473,
+      "t_wall_s": 74.77375936508179,
+      "low_level_calls": 20,
+      "low_level_free_frac": 0.6469401041666666,
+      "vmax_observed": 1.3519172668457031,
+      "CS_vel_low": 0,
+      "CS_low": 0,
+      "CS_vel_medium": 1,
+      "CS_medium": 0,
+      "CS_vel_high": 1,
+      "CS_high": 0,
+      "SR": 0,
+      "SOLVED_005": 0,
+      "SOLVED_010": 0,
+      "coll_env": 0,
+      "coll_agents": 71,
+      "DA": 0.0,
+      "goal_err_max": 0.006013907957822084
+    },
+    {
+      "trial": 1,
+      "map": "corridor",
+      "env": "EnvConveyor2D",
+      "n_agents": 12,
+      "n_samples": 768,
+      "status": "TrialSuccessStatus.FAIL_NO_SOLUTION",
+      "num_ct_expansions": 0,
+      "t_plan_s": 1.198591947555542,
+      "t_build_s": 0.8790147304534912,
+      "t_wall_s": 2.084934949874878,
+      "low_level_calls": 4,
+      "low_level_free_frac": 0.6087239583333334,
+      "SR": 0,
+      "SOLVED_005": 0,
+      "SOLVED_010": 0,
+      "coll_env": -1,
+      "coll_agents": -1,
+      "DA": NaN,
+      "goal_err_max": NaN
+    },
+    {
+      "trial": 2,
+      "map": "corridor",
+      "env": "EnvConveyor2D",
+      "n_agents": 12,
+      "n_samples": 768,
+      "status": "TrialSuccessStatus.FAIL_NO_SOLUTION",
+      "num_ct_expansions": 0,
+      "t_plan_s": 0.878077507019043,
+      "t_build_s": 1.0567350387573242,
+      "t_wall_s": 1.9415233135223389,
+      "low_level_calls": 3,
+      "low_level_free_frac": 0.43012152777777773,
+      "SR": 0,
+      "SOLVED_005": 0,
+      "SOLVED_010": 0,
+      "coll_env": -1,
+      "coll_agents": -1,
+      "DA": NaN,
+      "goal_err_max": NaN
+    },
+    {
+      "trial": 3,
+      "map": "corridor",
+      "env": "EnvConveyor2D",
+      "n_agents": 12,
+      "n_samples": 768,
+      "status": "TrialSuccessStatus.FAIL_NO_SOLUTION",
+      "num_ct_expansions": 0,
+      "t_plan_s": 1.4640419483184814,
+      "t_build_s": 0.8365688323974609,
+      "t_wall_s": 2.3073489665985107,
+      "low_level_calls": 5,
+      "low_level_free_frac": 0.58515625,
+      "SR": 0,
+      "SOLVED_005": 0,
+      "SOLVED_010": 0,
+      "coll_env": -1,
+      "coll_agents": -1,
+      "DA": NaN,
+      "goal_err_max": NaN
+    },
+    {
+      "trial": 4,
+      "map": "corridor",
+      "env": "EnvConveyor2D",
+      "n_agents": 12,
+      "n_samples": 768,
+      "status": "TrialSuccessStatus.FAIL_NO_SOLUTION",
+      "num_ct_expansions": 0,
+      "t_plan_s": 1.692110300064087,
+      "t_build_s": 1.049849033355713,
+      "t_wall_s": 2.7486793994903564,
+      "low_level_calls": 6,
+      "low_level_free_frac": 0.4581163194444444,
+      "SR": 0,
+      "SOLVED_005": 0,
+      "SOLVED_010": 0,
+      "coll_env": -1,
+      "coll_agents": -1,
+      "DA": NaN,
+      "goal_err_max": NaN
+    },
+    {
+      "trial": 5,
+      "map": "corridor",
+      "env": "EnvConveyor2D",
+      "n_agents": 12,
+      "n_samples": 768,
+      "status": "TrialSuccessStatus.FAIL_NO_SOLUTION",
+      "num_ct_expansions": 0,
+      "t_plan_s": 1.1916370391845703,
+      "t_build_s": 0.8385579586029053,
+      "t_wall_s": 2.0372066497802734,
+      "low_level_calls": 4,
+      "low_level_free_frac": 0.75,
+      "SR": 0,
+      "SOLVED_005": 0,
+      "SOLVED_010": 0,
+      "coll_env": -1,
+      "coll_agents": -1,
+      "DA": NaN,
+      "goal_err_max": NaN
+    },
+    {
+      "trial": 6,
+      "map": "corridor",
+      "env": "EnvConveyor2D",
+      "n_agents": 12,
+      "n_samples": 768,
+      "status": "TrialSuccessStatus.FAIL_NO_SOLUTION",
+      "num_ct_expansions": 0,
+      "t_plan_s": 1.7623181343078613,
+      "t_build_s": 1.0690107345581055,
+      "t_wall_s": 2.838365316390991,
+      "low_level_calls": 6,
+      "low_level_free_frac": 0.6697048611111112,
+      "SR": 0,
+      "SOLVED_005": 0,
+      "SOLVED_010": 0,
+      "coll_env": -1,
+      "coll_agents": -1,
+      "DA": NaN,
+      "goal_err_max": NaN
+    },
+    {
+      "trial": 7,
+      "map": "corridor",
+      "env": "EnvConveyor2D",
+      "n_agents": 12,
+      "n_samples": 768,
+      "status": "TrialSuccessStatus.FAIL_RUNTIME_LIMIT",
+      "num_ct_expansions": 7,
+      "t_plan_s": 61.94672179222107,
+      "t_build_s": 0.842036247253418,
+      "t_wall_s": 62.7955539226532,
+      "low_level_calls": 26,
+      "low_level_free_frac": 0.509364983974359,
+      "vmax_observed": 1.3809903860092163,
+      "CS_vel_low": 0,
+      "CS_low": 0,
+      "CS_vel_medium": 1,
+      "CS_medium": 0,
+      "CS_vel_high": 1,
+      "CS_high": 0,
+      "SR": 0,
+      "SOLVED_005": 0,
+      "SOLVED_010": 0,
+      "coll_env": 0,
+      "coll_agents": 55,
+      "DA": 0.0,
+      "goal_err_max": 0.004076400306075811
+    },
+    {
+      "trial": 8,
+      "map": "corridor",
+      "env": "EnvConveyor2D",
+      "n_agents": 12,
+      "n_samples": 768,
+      "status": "TrialSuccessStatus.FAIL_RUNTIME_LIMIT",
+      "num_ct_expansions": 4,
+      "t_plan_s": 65.28557682037354,
+      "t_build_s": 1.0392332077026367,
+      "t_wall_s": 66.33155560493469,
+      "low_level_calls": 20,
+      "low_level_free_frac": 0.7182942708333333,
+      "vmax_observed": 1.7778164148330688,
+      "CS_vel_low": 0,
+      "CS_low": 0,
+      "CS_vel_medium": 0,
+      "CS_medium": 0,
+      "CS_vel_high": 0,
+      "CS_high": 0,
+      "SR": 0,
+      "SOLVED_005": 0,
+      "SOLVED_010": 0,
+      "coll_env": 0,
+      "coll_agents": 69,
+      "DA": 0.0,
+      "goal_err_max": 0.005768441129475832
+    },
+    {
+      "trial": 9,
+      "map": "corridor",
+      "env": "EnvConveyor2D",
+      "n_agents": 12,
+      "n_samples": 768,
+      "status": "TrialSuccessStatus.FAIL_NO_SOLUTION",
+      "num_ct_expansions": 0,
+      "t_plan_s": 1.381659984588623,
+      "t_build_s": 0.8293285369873047,
+      "t_wall_s": 2.2177648544311523,
+      "low_level_calls": 5,
+      "low_level_free_frac": 0.47421875,
+      "SR": 0,
+      "SOLVED_005": 0,
+      "SOLVED_010": 0,
+      "coll_env": -1,
+      "coll_agents": -1,
+      "DA": NaN,
+      "goal_err_max": NaN
+    }
+  ]
+}

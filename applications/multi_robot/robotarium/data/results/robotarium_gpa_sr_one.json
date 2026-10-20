@@ -1,0 +1,102 @@
+[
+ {
+  "map": "empty",
+  "N": 3,
+  "SR_one": 1.0
+ },
+ {
+  "map": "empty",
+  "N": 6,
+  "SR_one": 1.0
+ },
+ {
+  "map": "empty",
+  "N": 9,
+  "SR_one": 1.0
+ },
+ {
+  "map": "empty",
+  "N": 12,
+  "SR_one": 1.0
+ },
+ {
+  "map": "corridor",
+  "N": 3,
+  "SR_one": 1.0
+ },
+ {
+  "map": "corridor",
+  "N": 6,
+  "SR_one": 1.0
+ },
+ {
+  "map": "corridor",
+  "N": 9,
+  "SR_one": 1.0
+ },
+ {
+  "map": "corridor",
+  "N": 12,
+  "SR_one": 0.8
+ },
+ {
+  "map": "crossroom",
+  "N": 3,
+  "SR_one": 1.0
+ },
+ {
+  "map": "crossroom",
+  "N": 6,
+  "SR_one": 1.0
+ },
+ {
+  "map": "crossroom",
+  "N": 9,
+  "SR_one": 1.0
+ },
+ {
+  "map": "crossroom",
+  "N": 12,
+  "SR_one": 1.0
+ },
+ {
+  "map": "shelf",
+  "N": 3,
+  "SR_one": 1.0
+ },
+ {
+  "map": "shelf",
+  "N": 6,
+  "SR_one": 1.0
+ },
+ {
+  "map": "shelf",
+  "N": 9,
+  "SR_one": 1.0
+ },
+ {
+  "map": "shelf",
+  "N": 12,
+  "SR_one": 1.0
+ },
+ {
+  "map": "corridorbay",
+  "N": 3,
+  "SR_one": 1.0
+ },
+ {
+  "map": "corridorbay",
+  "N": 6,
+  "SR_one": 1.0
+ },
+ {
+  "map": "corridorbay",
+  "N": 9,
+  "SR_one": 1.0
+ },
+ {
+  "map": "corridorbay",
+  "N": 12,
+  "SR_one": 1.0
+ }
+]

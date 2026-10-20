@@ -1,0 +1,11 @@
+# id	name in the paper (Table 3)	exp-name of the run behind the table
+no	Diffuser (unconstrained)	hard_no_guidance
+classifier	Classifier Guidance	hard_classifier_guidance
+gradient	Gradient Guidance	hard_gradient_guidance
+projection	Projected Diffusion	hard_projected_diffusion
+primal-dual	Primal-Dual	hard_primal_dual
+augmented-lagrangian	Augmented Lagrangian	hard_augmented_lagrangian
+safediffuser-ros	SafeDiffuser-RoS	hard_safediffuser_ros
+safediffuser-res	SafeDiffuser-ReS	hard_safediffuser_res
+safediffuser-tvs	SafeDiffuser-TVS	hard_safediffuser_tvs
+direct	DiRecT	direct_hard_12c

@@ -1,0 +1,11 @@
+# id (DiRecT/configs/policies/<id>.yaml)	name in the paper (Maze2D tables)
+no-guidance	Diffuser
+classifier-guidance	Classifier Guidance
+gradient-guidance	Gradient Guidance
+projection	Projected Diffusion
+primal-dual	Primal-Dual
+augmented-lagrangian	Augmented Lagrangian
+safediffuser-ros	SafeDiffuser-RoS
+safediffuser-res	SafeDiffuser-ReS
+safediffuser-tvs	SafeDiffuser-TVS
+direct	DiRecT

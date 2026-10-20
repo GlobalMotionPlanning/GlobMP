@@ -1,0 +1,12 @@
+--- a/policy/direct.py
++++ b/policy/direct.py
+@@ -76,6 +76,9 @@
+         if prediction_objective == "distance":
+             objective_fn = self._make_distance_objective(normalizer)
+ 
++        import os                                                        # GlobMP as the projector: DIRECT_PROJECTOR=globmp
++        if os.environ.get('DIRECT_PROJECTOR', '') == 'globmp':           # (applications/avoiding/globmp_projector.py)
++            from globmp_projector import GlobMPProjector as IpoptProjector
+         self._projector = IpoptProjector(
+             circular_obstacles=circular_obs,
+             planar_obstacles=planar_obs,

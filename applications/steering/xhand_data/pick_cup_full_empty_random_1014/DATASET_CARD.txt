@@ -1,0 +1,10 @@
+a. Task ID: Teleop-Glove 10-14-2026-3
+Task name: Pick up a full or an empty cup (randomized positions) using RobotEra XHand1 on DexMate Vega, teleoperated with a Meta glove
+c. Number of subtasks: 2 (cup load: full, empty -- same motion, different load)
+d. Description of the subtask: The right hand picks a paper cup off a small black box; a white plate is on the table next to it. The left arm stays at rest. Cup and plate positions vary between episodes. Two cup loads were recorded in one session: full cup (episodes 0060-0109, 45 episodes) and empty cup (0110-0168, 55 episodes). The earlier takes (0015-0059, 41 episodes) were recorded with too little grip force and are not part of either set; use only 0060-0168 for training. Load identified from the right-hand fingertip force (holding force 142-363 full, 1-112 empty; no overlap). Teleoperation is glove-based: the operator wears a Meta glove for finger retargeting onto the XHand1, with no exoskeleton. Wrist and arm pose is tracked via Vive.
+e. Number of episodes collected: 141 (100 usable: 45 full, 55 empty)
+f. Any extra comments: XHand1 12-DOF per hand + fingertip tactile; Meta-glove teleop, no exoskeleton. 4 RGB cameras (head_left, head_right, left_wrist, right_wrist), 640×360 @ 30 fps, H.264. Command rate 30 Hz. Arms 7 DOF each with joint positions, target DOFs, and 4×4 current/target poses. Episode durations: mean 14 s, median 14 s, range 10–26 s, 34 min total. Episodes 0015–0168 of the 2026-10-14 evening session (only takes marked success). Known issues: the left_wrist video file shows the right hand and right_wrist the left; LEFT-hand fingertip tactile is all zero (force and raw) in episodes 0017 and 0026–0031, and otherwise shows only resting offsets (middle, ring, pinky ~30-75) -- the left hand is idle in this task, mask its tactile.
+
+Collected Data History
+
+2026-10-14: Pick up a full or an empty cup (randomized positions), XHand1 hands with tactile, Meta-glove teleop (no exoskeleton), 4-camera — 141 episodes (100 usable: full 0060–0109, empty 0110–0168) — avg ~14 s/episode — /data1/dexmate/teleop/pick_cup_full_empty_random_20261014

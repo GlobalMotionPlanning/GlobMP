@@ -1,0 +1,9 @@
+config/paths.env
+runs/
+**/data_trajectories/
+**/data_trained_models/
+**/results/
+**/results_inference/
+**/__pycache__/
+*.egg-info/
+!SMD/deps/*/*.egg-info/

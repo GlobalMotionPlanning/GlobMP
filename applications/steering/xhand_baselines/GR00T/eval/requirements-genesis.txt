@@ -1,0 +1,8 @@
+# Genesis rendering env (kept SEPARATE from the training venv to avoid dependency clashes).
+#   uv venv --python 3.10 .venv-genesis
+#   uv pip install --python .venv-genesis/bin/python -r eval/requirements-genesis.txt
+genesis-world==1.1.0
+imageio[ffmpeg]>=2.34
+opencv-python>=4.9
+numpy>=1.24
+torch  # genesis-world imports torch; the CPU wheel is sufficient (replay uses gs.cpu)
