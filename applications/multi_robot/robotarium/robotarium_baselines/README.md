@@ -47,7 +47,7 @@ MMD-CBS is the MMD planner (Shaoul et al., [yoraish/mmd](https://github.com/yora
 
 ## Setup
 
-0. Get the repository with git and git-lfs: `git lfs install`, then `git clone https://huggingface.co/tarzanagh/GlobMP`
+0. Get the repository with git and git-lfs: `git lfs install`, then `git clone https://huggingface.co/GlobalMotionPlanning/GlobMP`
    (models, instances and demonstrations are LFS files). A file-by-file download (`hf download`, `snapshot_download`)
    of its 3,000+ files runs into the Hub's request limit. The scripts lose their executable bit on the Hub: run them
    with `bash`.

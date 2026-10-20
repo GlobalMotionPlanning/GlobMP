@@ -86,6 +86,6 @@ block family, both step rules, both charts, the tracking costs, polish, certific
 returns bit-identical iterates from the same start. Each folder's README gives the exact commands,
 data, environments and expected numbers, and lists what differs from the paper and why.
 
-The five demonstration archives of the Robotarium baselines (`applications/multi_robot/robotarium/robotarium_baselines/data_prep/demonstrations/*.tar.zst`, 779 MB) are on Hugging Face only: https://huggingface.co/tarzanagh/GlobMP
+The five demonstration archives of the Robotarium baselines (`applications/multi_robot/robotarium/robotarium_baselines/data_prep/demonstrations/*.tar.zst`, 779 MB) are on Hugging Face only: https://huggingface.co/GlobalMotionPlanning/GlobMP
 
-Project page: https://globalmotionplanning.github.io/globmp/
+Project page: https://globalmotionplanning.github.io/
