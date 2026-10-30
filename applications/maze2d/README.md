@@ -12,6 +12,10 @@ This directory reproduces
 - `figures/maze2d_ours_paths.pdf` (plan, benchmark waypoints and PD rollout on both maps) and
   `figures/maze2d_ours_clearance.pdf` (keep-out clearance over the episode).
 
+`direct_globmp/` runs GlobMP inside DiRecT's own diffusion sampler instead (same checkpoint, sampler, dynamics, PD
+execution and metrics as DiRecT; GlobMP in place of IPOPT in DiRecT's MPC step), over 10 seeds x 10 episodes: see
+`direct_globmp/README.md`.
+
 The Broad table row "GlobMP (Ours), disc cover" (each e=4 keep-out replaced by its circumscribing
 disc) comes from a different formulation and is not reproduced here.
 
