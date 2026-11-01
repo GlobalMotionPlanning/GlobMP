@@ -5,21 +5,17 @@ in D4RL `maze2d-large` travels between fixed endpoints and must stay outside kee
 in the corridors. Two settings: `broad` (two keep-outs, one ellipse with e=2 and one super-ellipse
 with e=4) and `narrow` (six super-ellipses with e=4).
 
-This directory reproduces
+**The paper's Maze2D rows and figures come from `direct_globmp/`**: GlobMP inside DiRecT's own diffusion sampler (same
+checkpoint, sampler, dynamics, PD execution and metrics as DiRecT; GlobMP in place of IPOPT in DiRecT's MPC step), over
+10 seeds x 10 episodes. See `direct_globmp/README.md` for the method, the commands and the results.
 
-- the rows **GlobMP (Ours), exact e=4** of the paper's Maze2D tables (`tab:maze2d` for Broad,
-  `tab:maze2d-narrow` for Narrow): SR, Viol., Score, Time, Gen. SR, Gen. Viol., Gen. AS, Gen. CS;
-- `figures/maze2d_ours_paths.pdf` (plan, benchmark waypoints and PD rollout on both maps) and
-  `figures/maze2d_ours_clearance.pdf` (keep-out clearance over the episode).
+The rest of this directory (`plan.py`, `evaluate.py`, `figures.py`) is an earlier, deterministic GlobMP planner that
+does not use a learned prior: a corridor selected by breadth-first search, then one spline optimized in it. Its rows
+are no longer in the paper. Note that it centres the maze cells at integer (row, col), while in observation coordinates
+DiRecT's maze model puts wall cell (i, j) at (i - 0.2, j - 0.2) (particle body at (1.2, 1.2), walls at (i + 1, j + 1)),
+so its corridor boxes are offset by 0.2.
 
-`direct_globmp/` runs GlobMP inside DiRecT's own diffusion sampler instead (same checkpoint, sampler, dynamics, PD
-execution and metrics as DiRecT; GlobMP in place of IPOPT in DiRecT's MPC step), over 10 seeds x 10 episodes: see
-`direct_globmp/README.md`.
-
-The Broad table row "GlobMP (Ours), disc cover" (each e=4 keep-out replaced by its circumscribing
-disc) comes from a different formulation and is not reproduced here.
-
-## Method in brief
+## The earlier deterministic planner: method in brief
 
 The plan is one C^2 spline of 12 Bezier segments of degree 9 in maze coordinates (y, x), cost the
 integral of the squared acceleration (k = l = 2). A breadth-first search over the maze cells fixes a
