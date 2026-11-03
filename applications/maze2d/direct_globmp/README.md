@@ -59,7 +59,7 @@ python check.py              # summary + independent checks (keep-outs, walls, d
 
 ## Result
 
-Seeds 0-9, 10 episodes each. DiRecT's row is the paper's (seed 0, 10 episodes, measured on another machine).
+Seeds 0-9, 10 episodes each. All 200 episodes are on Hugging Face under `results/`: every plan and rollout, DiRecT's evaluator statistics and the margin each plan holds (see `results/README.md`; `python check.py results` recomputes this table and the checks). DiRecT's row is the paper's (seed 0, 10 episodes, measured on another machine).
 
 | Map | Method | Episodes | SR | Viol. | Score | Time (s) | Gen. SR | Gen. AS | Gen. CS |
 |---|---|---|---|---|---|---|---|---|---|
